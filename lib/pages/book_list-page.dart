@@ -76,3 +76,40 @@ class BookListPage extends StatelessWidget {
     );
   }
 }
+class BookCard extends StatelessWidget {
+  final String bookName;
+  final String authorName;
+  final String rating;
+  final String coverAssetPath;
+  final VoidCallback onTap;
+
+  BookCard({
+    required this.bookName,
+    required this.authorName,
+    required this.rating,
+    required this.coverAssetPath,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: InkWell(
+        onTap: onTap,
+
+        child: ListTile(
+          leading: Image.asset(coverAssetPath),
+          title: Text(bookName),
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(authorName),
+              Text('Rating: $rating'),
+            ],
+          ),
+          trailing: Icon(Icons.navigate_next),
+        ),
+      ),
+    );
+  }
+}
