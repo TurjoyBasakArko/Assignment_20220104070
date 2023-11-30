@@ -63,7 +63,7 @@ flutter:
     - images/twilight.jpeg
     - images/Verne_Tour_du_Monde.jpeg
     - images/1.jpeg
-  
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
